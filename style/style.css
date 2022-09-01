@@ -68,6 +68,29 @@ img {
   overflow: hidden;
 }
 
+.button {
+  display: inline-block;
+  align-items: center;
+  height: 50px;
+
+  background-color: var(--accent-color);
+  color: var(--primary-bg-color);
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  transition: background-color var(--primary-transition);
+
+  font-weight: 700;
+  line-height: 1.8;
+  font-family: inherit;
+  font-style: normal;
+  border-radius: 4px;
+  border: none;
+  cursor: pointer;
+}
+
+.button:hover {
+  background-color: var(--hover-hero-button);
+}
+
 /* header */
 .page-header {
   border-bottom: 1px solid #ececec;
@@ -235,27 +258,11 @@ img {
 }
 
 .hero-button {
-  display: inline-block;
   padding: 10px 32px;
-  border: none;
-  border-radius: 4px;
   min-width: 216px;
-  align-items: center;
-
-  background-color: var(--accent-color);
-  color: var(--primary-bg-color);
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
-  transition: background-color var(--primary-transition);
-
-  font-weight: 700;
-  line-height: 1.8;
-  font-family: inherit;
-  cursor: pointer;
 }
 
-.hero-button:hover {
-  background-color: var(--hover-hero-button);
-}
+
 
 /* features */
 .features-list,
@@ -530,7 +537,9 @@ background-color: rgba(47, 48, 58, 0.8);
   align-items: baseline;
 }
 
-.subscribe-title {
+/* Join (socials media) */
+.join-title,
+.subscribe {
   margin-bottom: 20px;
 
   text-transform: uppercase;
@@ -543,15 +552,57 @@ background-color: rgba(47, 48, 58, 0.8);
   text-transform: uppercase;
 }
 
-.subscribe {
+.join {
   margin-left: 70px;
 }
 
-.subscribe-bg {
+.join-bg {
   background-color: rgba(255, 255, 255, 0.1);
   color: var(--primary-bg-color);
   fill: currentColor;
 }
+
+/* Subscribe form */
+.form-field {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-subscribe {
+  width: 570px;
+  display: flex;
+  align-items: flex-end;
+  margin-left: 93px;
+}
+
+.form-subscribe input {
+  max-width: 358px;
+  height: 50px;
+  padding: 15px 295px 15px 16px;
+  font-size: 16px;
+  line-height: 20px;
+
+  color: var(--transparent-white-color);
+  background-color: var(--third-bg-color);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 4px;
+}
+
+
+.button-subscribe {
+  display: flex;
+  justify-content: center;
+  width: 200px;
+  padding: 10px 28px;
+  margin-left: 12px;
+
+  font-size: 16px;
+}
+
+.svg-subscribe {
+  margin-left: 10px;
+}
+
 
 /* backdrop */
 .backdrop {
