@@ -682,6 +682,7 @@ background-color: rgba(47, 48, 58, 0.8);
   background-color: var(--primary-bg-color);
   border: 1px solid rgba(0, 0, 0, 0.1);
   color: var(--title-text-color);
+  transition: color var(--primary-transition);
   fill: currentColor;
   border-radius: 50px;
   cursor: pointer;
@@ -729,6 +730,7 @@ background-color: rgba(47, 48, 58, 0.8);
   border: 1px solid rgba(33, 33, 33, 0.2);
   border-radius: 4px;
   color: var(--title-text-color);
+  transition: border var(--primary-transition), color var(--primary-transition);
 }
 
 .form-input:focus,
@@ -892,6 +894,7 @@ background-color: rgba(47, 48, 58, 0.8);
   width: 370px;
 
   cursor: pointer;
+  transition: box-shadow var(--primary-transition);
 }
 
 .project-link:hover,
