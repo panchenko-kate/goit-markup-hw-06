@@ -218,6 +218,8 @@ img {
 .header-icon {
   margin-right: 10px;
   vertical-align: middle;
+
+  transition: fill var(--primary-transition);
 }
 
 /* hero */
@@ -427,7 +429,7 @@ background-color: rgba(47, 48, 58, 0.8);
   border-radius: 50px;
 
   background-color: var(--primary-bg-color);
-  color: var(--primary-text-color);
+  color: var(--icon-color);
   fill: currentColor;
 
   transition: color var(--primary-transition), background-color var(--primary-transition);
@@ -570,7 +572,7 @@ background-color: rgba(47, 48, 58, 0.8);
 }
 
 .join-title,
-.subscribe {
+.subscribe-text {
   text-transform: uppercase;
   color: var(--primary-bg-color);
 
@@ -581,24 +583,27 @@ background-color: rgba(47, 48, 58, 0.8);
   text-transform: uppercase;
 }
 
+.subscribe-text {
+  display: inline-block;
+  margin-bottom: 20px;
+}
+
 .subscribe {
   display: inline-block;
-  width: 358px;
+  margin-left: 93px;
+  width: 570px;
 }
 
 
 .form-subscribe {
-  /* width: 570px; */
   display: flex;
-  align-items: flex-end;
-  margin-left: 93px;
+
 }
 
 .form-subscribe input {
-  width: 100%;
+  width: 358px;
   height: 50px;
   padding: 15px 16px;
-  margin-top: 20px;
   font-size: 16px;
   line-height: 1.25;
 
@@ -634,7 +639,8 @@ background-color: rgba(47, 48, 58, 0.8);
   background-color: rgba(0, 0, 0, 0.2);
 
   opacity: 1;
-  transition: opacity var(--primary-transition);
+  transition: opacity var(--primary-transition), visibility var(--primary-transition);
+
 }
 
 .backdrop.is-hidden {
@@ -713,11 +719,19 @@ background-color: rgba(47, 48, 58, 0.8);
 
 .form-field {
   position: relative;
-  margin-bottom: 10px;
+
 
   font-size: 12px;
   line-height: 1.16;
   letter-spacing: 0.01em;
+}
+
+.form-field:not(:last-child) {
+  margin-bottom: 10px;
+}
+
+.form-field:nth-child(5) {
+  margin-bottom: 30px;
 }
 
 .form-field input {
@@ -730,7 +744,7 @@ background-color: rgba(47, 48, 58, 0.8);
   border: 1px solid rgba(33, 33, 33, 0.2);
   border-radius: 4px;
   color: var(--title-text-color);
-  transition: border var(--primary-transition), color var(--primary-transition);
+  transition: border var(--primary-transition);
 }
 
 .form-input:focus,
@@ -747,6 +761,8 @@ background-color: rgba(47, 48, 58, 0.8);
   position: absolute;
   bottom: 11px;
   left: 12px;
+
+  transition: fill var(--primary-transition);
 }
 
 .form-comment {
@@ -794,6 +810,10 @@ background-color: rgba(47, 48, 58, 0.8);
 
 .agreement {
   appearance: none;
+}
+
+.agreement:focus + .icon-check {
+  border: 2px solid var(--accent-color);
 }
 
 
